@@ -66,7 +66,7 @@ The graph above shows that foods from the sample (size 1000) that are higher in 
 | (' cheese deluxe", ', ', ', ', ', ', ', ', ', ', ', ', ', ', ', ', ') |                            3 |                             7 |                              3 |
 | (' sugar", ', ', ')                                                   |                            1 |                             5 |                              1 |
 
-Here, I further investigated how common statistics would measure up for recipes when it came to the amount of protein with given ingredients. Many values were unique, and may be more interesting if I had got the mean() and so forth for the individual ingredients.
+Here, I further investigated how common statistics would measure up for recipes when it came to the amount of protein with given ingredients. Some values like shown above, are repeats, and would likely be more useful if I had time to clean it up.
 
 # Assessment of Missingness
 
