@@ -97,11 +97,11 @@ When performing the hypothesis testing, I chose to run permutation tests since I
 
 # Framing A Prediction Problem
 
-Words.
+I plan to predict the average rating of a recipe which will utilize a regression model since the data is continuous. Because I have data that supports a difference between how people rate food options (from the previous section), I want to predict the average rating of recipes using that knowledge. To evaluate the model, I'm keeping it simple and using mean squared error to test predicted values against actual values.
 
 # Baseline Model
 
-Words.
+
 
 # Final Model
 
