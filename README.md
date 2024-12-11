@@ -30,9 +30,20 @@ The original dataframe, upon merging the two dataframes ```RAW_recipes``` and ``
 3. I created seperate nutritonal columns from ```nutrition```.
    - I created the columns 'calories', 'total_fat', 'sugar', 'sodium', 'protein', 'saturated_fat', and 'carbohydrates' using the respective values in the original ```nutrition``` column which contained a list of PDV's for each recipe.
    - I casted elements for each column to be of type float, since some lists were formatted as strings rather than actual lists.
-5. I converted any other columns that looked like lists, but were actually strings.
+5. I converted any other columns that looked like lists, but were actually strings, to a list containing their respective values (float or string).
    - These included the columns: 'tags', 'steps', and 'ingredients'.
-7. a
+7. Created ratings for the columns 'protein', 'saturated_fat', and 'sugar'.
+   - These ratings range from 1-3
+   - Using guidelines from the [U.S Food & Drug Administration](https://www.fda.gov/food/nutrition-facts-label/lows-and-highs-percent-daily-value-nutrition-facts-label), I am determining if a food has a high, middle, or low pdv for the given nutrient depending on how it matches with the FDAs standards. This grade will be measured as a number where low=1 and high=3.
+8. Lastly, I create a column called ```high_in_protein```, which is a column of type bool. A recipe is considered high in protein if it recieves a score/rating higher than 2.
+
+| name                                 |   minutes |   protein_rating |   sat_fats_rating |   sugar_rating |   calories |   total_fat |   saturated_fat |   sodium |   protein |   carbohydrates |   sugar |   average_rating | high_in_protein   |
+|:-------------------------------------|----------:|-----------------:|------------------:|---------------:|-----------:|------------:|----------------:|---------:|----------:|----------------:|--------:|-----------------:|:------------------|
+| 1 brownies in the world    best ever |        40 |                1 |                 2 |              3 |      138.4 |          10 |              19 |        3 |         3 |               6 |      50 |                4 | False             |
+| 1 in canada chocolate chip cookies   |        45 |                2 |                 3 |              3 |      595.1 |          46 |              51 |       22 |        13 |              26 |     211 |                5 | False             |
+| 412 broccoli casserole               |        40 |                3 |                 3 |              2 |      194.8 |          20 |              36 |       32 |        22 |               3 |       6 |                5 | True              |
+| 412 broccoli casserole               |        40 |                3 |                 3 |              2 |      194.8 |          20 |              36 |       32 |        22 |               3 |       6 |                5 | True              |
+| 412 broccoli casserole               |        40 |                3 |                 3 |              2 |      194.8 |          20 |              36 |       32 |        22 |               3 |       6 |                5 | True              |
 
 # Assessment of Missingness
 
