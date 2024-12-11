@@ -22,7 +22,8 @@ The original dataframe, upon merging the two dataframes ```RAW_recipes``` and ``
 
 # Data Cleaning & Exploratory Analysis
 
-## Steps for cleaning the dataset.
+## Steps for cleaning the dataset
+
 0. Merge ```RAW_recipes``` and ```RAW_interactions```.
 1. Replace ```np.nan``` values with 0.
    - Some of the reviews for the recipes are just comments or tweaks, which do not have a rating option on the website this data was gathered from. Thus, by design the rating for the recipe was defaulted to zero.
@@ -44,6 +45,17 @@ The original dataframe, upon merging the two dataframes ```RAW_recipes``` and ``
 | 412 broccoli casserole               |        40 |                3 |                 3 |              2 |      194.8 |          20 |              36 |       32 |        22 |               3 |       6 |                5 | True              |
 | 412 broccoli casserole               |        40 |                3 |                 3 |              2 |      194.8 |          20 |              36 |       32 |        22 |               3 |       6 |                5 | True              |
 | 412 broccoli casserole               |        40 |                3 |                 3 |              2 |      194.8 |          20 |              36 |       32 |        22 |               3 |       6 |                5 | True              |
+
+## Univariate Analysis
+
+<iframe
+  src="assets/file-name.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
+The graph above shows the distribution of average ratings for a sample size of 1000, in which there is a lot of overlap showing little difference in how ratings differed based on 'healthiness'. The x-axis represents ratings (on a 5 point scale), and the y-axis shows the probability of each rating. 
 
 # Assessment of Missingness
 
