@@ -101,7 +101,13 @@ I plan to predict the average rating of a recipe which will utilize a regression
 
 # Baseline Model
 
+In this section, I add a new column called ```is_healthy``` which takes recipes that have a high score (3) in ```protein_rating```, and low scores (1) in both ```sat_fats_rating``` (PDV score for the amount of saturated fats in the recipe based on FDA standards) and ```sugar_rating``` (PDV score for the amount of sugar in the recipe based on FDA standards). This column acts as a way to measure the 'healthiness' of a recipe by maximizing protein which is prevalent in dieting for fat loss/muscle gain, and minimzing the most unhealthy macronutrients. These would be sugar and saturated fat. We need carbs, fats, and (some) sodium to function properly as people, and thus the 2 mentioned macros were chosen to be minimized.
 
+My model is a regression model, specifically using the RandomForestRegressor, and the data is separated into testing and training sets. The features in the model are ```is_healthy``` and ```minutes```. The column 'is_healthy' was chosen as a feature since the 'healthiness' affects rating as seen in the previous section 'Hypothesis Testing'. And minutes was chosen because perhaps people would rate a recipe that takes a long time to cook lower. The feature ```is_healthy``` is boolean data that was one-hot-encoded into quantitative data and ```minutes``` remains the same. To measure performance, I used mean squared error.
+
+## Reported Performance
+
+The model was 'fairly poor', with a ```MSE (mean squared error) of 0.502128284338456```. I do not believe this model is good since the MSE is about 50, which is about directly in the middle between absolutely terrible and a perfect fit. This does not make the model particularly useful.
 
 # Final Model
 
