@@ -70,7 +70,11 @@ Here, I further investigated how common statistics would measure up for recipes 
 
 # Assessment of Missingness
 
-More words.
+The columns ```description```, ```rating```, and ```review``` stood out due to their higher frequency of null values in the dataset.
+
+## NMAR Analysis
+
+
 
 # Hypothesis Testing
 
