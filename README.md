@@ -49,7 +49,7 @@ The original dataframe, upon merging the two dataframes ```RAW_recipes``` and ``
 ## Univariate Analysis
 
 <iframe
-  src="assets/file-name.html"
+  src="assets/plot.html"
   width="800"
   height="600"
   frameborder="0"
