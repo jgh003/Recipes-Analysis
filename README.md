@@ -49,8 +49,24 @@ The original dataframe, upon merging the two dataframes ```RAW_recipes``` and ``
 ## Univariate Analysis
 
 <iframe src="assets/plot.html" width="800" height="600" frameborder="0"></iframe>
+The graph above shows the distribution of average ratings for a sample size of 1000, in which there is a lot of overlap showing little difference in how ratings differed based on 'healthiness'. The x-axis represents ratings (on a 5 point scale), and the y-axis shows the probability of each rating.
 
-The graph above shows the distribution of average ratings for a sample size of 1000, in which there is a lot of overlap showing little difference in how ratings differed based on 'healthiness'. The x-axis represents ratings (on a 5 point scale), and the y-axis shows the probability of each rating. 
+## Bivariate Analysis
+
+<iframe src="assets/plot2.html" width="800" height="600" frameborder="0"></iframe>
+The graph above shows that foods from the sample (size 1000) that are higher in protein tend to have higher levels of saturated fat.
+
+## Interesting Aggregates
+
+| ingredients                                                           |   ('protein_rating', 'mean') |   ('protein_rating', 'count') |   ('protein_rating', 'median') |
+|:----------------------------------------------------------------------|-----------------------------:|------------------------------:|-------------------------------:|
+| (' cheese deluxe", ', ', ', ', ', ', ')                               |                            3 |                             1 |                              3 |
+| (' cheese deluxe", ', ', ', ', ', ', ', ', ', ', ', ', ')             |                            3 |                             1 |                              3 |
+| (' cheese deluxe", ', ', ', ', ', ', ', ', ', ', ', ', ', ', ')       |                            3 |                             1 |                              3 |
+| (' cheese deluxe", ', ', ', ', ', ', ', ', ', ', ', ', ', ', ', ', ') |                            3 |                             7 |                              3 |
+| (' sugar", ', ', ')                                                   |                            1 |                             5 |                              1 |
+
+Here, I further investigated how common statistics would measure up for recipes when it came to the amount of protein with given ingredients. Many values were unique, and may be more interesting if I had got the mean() and so forth for the individual ingredients.
 
 # Assessment of Missingness
 
