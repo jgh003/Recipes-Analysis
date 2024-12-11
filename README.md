@@ -128,6 +128,7 @@ When splitting the groups, I decided to use ```minutes``` and explore how RMSE f
 - Alternative Hypothesis: Our model is unfair. RMSE differs between the groups.
 - Evaluation Metric: RMSE.
 - Test Statistic: Absolute difference in means.
+- Significance Level: 0.05.
 - p-value: ```0.33```. We reject the null hypothesis.
 
 ## Conclusion
