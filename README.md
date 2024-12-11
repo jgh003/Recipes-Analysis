@@ -111,8 +111,12 @@ The model was 'fairly poor', with a ```MSE (mean squared error) of 0.50212828433
 
 # Final Model
 
-More words.
+The features that I added are ```sugar``` and ```calories```. I initially chose them because it would make sense that if healthy recipes differed in rating from less healthy recipes, then something like sugar would help increase the model's effectiveness when predicting lower ratings (less healthy recipes were rated lower during hypothesis testing). And I chose calories because perhaps larger meals which may be more filling would be rated higher and thus help with predicting higher ratings. However, upon performing a k-fold cross validation, all the transformed features performed the same. Therefore, I stuck with adding ```sugar``` and ```calories``` as features. The ```sugar``` feature was tranformed using the ```QuantileTransformer``` since the distribution of sugar levels was not a normal distribution, and thus I wanted to see if there would be a difference with the model if I transformed the data to match the distribution. There was no difference. Ultimately for the model, I used linear regression and the model did improve.
+
+## Reported Performance
+
+The model did not perform fantastic, but it did improve significantly. ```The difference in MSE was -0.12960350026396222```, which made the new MSE 0.3725247840744938.
 
 # Fairness Analysis
 
-Final words.
+
