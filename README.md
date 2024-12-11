@@ -22,7 +22,17 @@ The original dataframe, upon merging the two dataframes ```RAW_recipes``` and ``
 
 # Data Cleaning & Exploratory Analysis
 
-Words here.
+## Steps for cleaning the dataset.
+0. Merge ```RAW_recipes``` and ```RAW_interactions```.
+1. Replace ```np.nan``` values with 0.
+   - Some of the reviews for the recipes are just comments or tweaks, which do not have a rating option on the website this data was gathered from. Thus, by design the rating for the recipe was defaulted to zero.
+2. I created a ```average_rating``` column, by grouping by the column ```recipe_id``` that way only existing rows which have a corresponding rating will be counted, and transformed by the pandas mean() function.
+3. I created seperate nutritonal columns from ```nutrition```.
+   - I created the columns 'calories', 'total_fat', 'sugar', 'sodium', 'protein', 'saturated_fat', and 'carbohydrates' using the respective values in the original ```nutrition``` column which contained a list of PDV's for each recipe.
+   - I casted elements for each column to be of type float, since some lists were formatted as strings rather than actual lists.
+5. I converted any other columns that looked like lists, but were actually strings.
+   - These included the columns: 'tags', 'steps', and 'ingredients'.
+7. a
 
 # Assessment of Missingness
 
@@ -36,11 +46,11 @@ Lolololo.
 
 Words.
 
-# The Baseline Model
+# Baseline Model
 
 Words.
 
-# The Final Model
+# Final Model
 
 More words.
 
