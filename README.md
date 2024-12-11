@@ -86,7 +86,14 @@ I examined the missingness of 'rating' in the cleaned dataframe by testing the d
 
 # Hypothesis Testing
 
-Lolololo.
+- Null Hypothesis: People do not rate healthier recipes different than less healthy recipes.
+- Alternative Hypothesis: People rate healthier recipes higher than less healthy recipes.
+- Test Statistic: Difference in Means.
+- Significance Level: 0.05.
+
+## Conclusion Of The Test
+
+When performing the hypothesis testing, I chose to run permutation tests since I want to see whether the difference between group means were statistically significant. The resulting p-value from the test was ```p = 0.718```, which means reject the null. People rate healthier foods higher than less healthy foods, and this was not randomly due to chance.
 
 # Framing A Prediction Problem
 
