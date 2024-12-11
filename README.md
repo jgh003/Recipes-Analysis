@@ -74,7 +74,15 @@ The columns ```description```, ```rating```, and ```review``` stood out due to t
 
 ## NMAR Analysis
 
+I believe the 'Description' column is NMAR because if someone made a recipe that was not original, there wouldn't be much need to explain what it is.
 
+## Missingness Dependency
+
+I examined the missingness of 'rating' in the cleaned dataframe by testing the dependency of its missingness. I investigate if the 'rating' column depends on the column ```recipe_id``` or the column ```minutes```. I took a sample of 10,000 (for computational reasons) and ran a permutation test where I used the absolute difference in means as the test statistic. Here's what I found:
+- The observed p-value for the test on 'recipe_id' was 0.991
+- The p-value for the test on 'minutes' was 0.007
+- The p-values demonstrated a clear dependency of missingness
+- The permutation test on 'recipe_id' did show a difference for the missingness of 'rating'
 
 # Hypothesis Testing
 
