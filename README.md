@@ -18,15 +18,7 @@ In addition, the American population highlights the need for research on topics 
 | nutrients | The nutrition facts of the recipe measured in PDV (percent daily values). |
 | rating    | The rating of the recipe by a user.                                       |
 
-
-
-| name                                 |   minutes |   protein_rating |   sat_fats_rating |   sugar_rating |   average_rating |   sugar |
-|:-------------------------------------|----------:|-----------------:|------------------:|---------------:|-----------------:|--------:|
-| 1 brownies in the world    best ever |        40 |                1 |                 2 |              3 |                4 |      50 |
-| 1 in canada chocolate chip cookies   |        45 |                2 |                 3 |              3 |                5 |     211 |
-| 412 broccoli casserole               |        40 |                3 |                 3 |              2 |                5 |       6 |
-| 412 broccoli casserole               |        40 |                3 |                 3 |              2 |                5 |       6 |
-| 412 broccoli casserole               |        40 |                3 |                 3 |              2 |                5 |       6 |
+The original dataframe, upon merging the two dataframes ```RAW_recipes``` and ```RAW_interactions```, resulted in a dataframe with 234,429 rows and 16 columns. However, only 4 columns were relevant and are shown above.
 
 # Data Cleaning & Exploratory Analysis
 
