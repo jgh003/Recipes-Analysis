@@ -115,8 +115,23 @@ The features that I added are ```sugar``` and ```calories```. I initially chose 
 
 ## Reported Performance
 
-The model did not perform fantastic, but it did improve significantly. ```The difference in MSE was -0.12960350026396222```, which made the new MSE 0.3725247840744938.
+The model did not perform fantastic, but it did improve significantly. ```The difference in MSE was -0.12960350026396222```, which made the new ```MSE 0.3725247840744938```.
 
 # Fairness Analysis
 
+## Overview
 
+When splitting the groups, I decided to use ```minutes``` and explore how RMSE for recipes with different cooking times differed. The value of 35 minutes as a threshold between groups was derived from the median of the input dataset. I wanted median in order to reduce noise from outliers.
+- Group X: Slow preparation times (>35 minutes)
+- Group Y: Fast preparation times (<35 minutes)
+- Null Hypothesis: Our model is fair. Its RMSE for recipes with a lower cook time and higher cook time are roughly the same, and any differences are due to random chance.
+- Alternative Hypothesis: Our model is unfair. RMSE differs between the groups.
+- Evaluation Metric: RMSE.
+- Test Statistic: Absolute difference in means.
+- p-value: ```0.33```. We reject the null hypothesis.
+
+## Conclusion
+
+At the end of the fairness analysis, the model was unfair.
+
+<iframe src="assets/plot4.html" width="800" height="600" frameborder="0"></iframe>
